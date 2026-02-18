@@ -17,7 +17,7 @@ body {
   flex-wrap: wrap;
 
   column-gap: 15px;
-  row-gap: 15px;
+  row-gap: 20px;
 }
 
 .container > * {
@@ -31,13 +31,24 @@ body {
   height: 199.1px;
 }
 
-
-.box1, .box2, .box3{
-  flex-basis: calc(33.333% - 10px);
+.box1{
+  flex-basis: calc(19% - 10px);
 }
 
-.box4, .box5{
-  flex-basis: calc(50.333% - 10px);
+.box2{
+  flex-basis: calc(43.5% - 10px);
+}
+
+.box3{
+  flex-basis: calc(37.5% - 10px);
+}
+
+.box4{
+  flex-basis: calc(83.5% - 10px);
+}
+
+.box5{
+  flex-basis: calc(16.5% - 10px);
 }
 
 .box6{
