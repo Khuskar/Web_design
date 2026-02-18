@@ -36,19 +36,19 @@ body {
 }
 
 .box2{
-  flex-basis: calc(41.5% - 10px);
+  flex-basis: calc(43.5% - 10px);
 }
 
 .box3{
-  flex-basis: calc(39.5% - 10px);
+  flex-basis: calc(37.5% - 10px);
 }
 
 .box4{
-  flex-basis: calc(81.5% - 10px);
+  flex-basis: calc(83.5% - 10px);
 }
 
 .box5{
-  flex-basis: calc(18.5% - 10px);
+  flex-basis: calc(16.5% - 10px);
 }
 
 .box6{
