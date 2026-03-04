@@ -7,17 +7,12 @@ body {
     font-family: tahoma;
 }
 
-/* =========================
-   CONTAINER
-========================= */
-
 .container {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
-/* Every flex child of container */
 .container > * {
     flex-basis: 200px;
     border: 2px solid firebrick;
@@ -25,10 +20,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-/* =========================
-   IMAGE
-========================= */
 
 .image {
     height: 200px;
@@ -56,10 +47,6 @@ body {
     background-image: url("https://unsplash.it/800/200?5");
 }
 
-/* =========================
-   INFO SECTION
-========================= */
-
 .info {
     display: flex;
     flex-direction: column;
@@ -67,36 +54,27 @@ body {
     padding: 1rem;
 }
 
-/* box1 */
 .box1 > .info {
     justify-content: space-between;
 }
 
-/* box2 */
 .box2 > .info {
     justify-content: center;
     align-items: flex-end;
 }
 
-/* box3 */
 .box3 > .info {
     justify-content: space-around;
 }
 
-/* box4 */
 .box4 > .info {
     justify-content: flex-end;
     align-items: center;
 }
 
-/* box5 */
 .box5 > .info {
     justify-content: space-evenly;
 }
-
-/* =========================
-   TAG LIST (UL)
-========================= */
 
 ul {
     list-style-type: none;
@@ -106,13 +84,10 @@ ul {
     flex-wrap: wrap;
 }
 
-/* Pink tags */
 ul > * {
     background: pink;
     padding: .5rem;
 }
-
-/* UL alignment per box */
 
 .box1 ul {
     justify-content: space-between;
@@ -134,14 +109,9 @@ ul > * {
     justify-content: center;
 }
 
-/* box4 li grow */
 .box4 ul > * {
     flex-grow: 1;
 }
-
-/* =========================
-   BUTTON
-========================= */
 
 button {
     background: firebrick;
