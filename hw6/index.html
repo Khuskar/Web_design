@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women.kg | Empowering Women in Leadership</title>
+    <!-- Use Google Fonts for dynamic modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Area -->
+    <nav class="navbar">
+        <div class="logo">Women<span>.kg</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn btn-outline" onclick="openModal('login-modal')">Login</button>
+            <button class="btn btn-primary" onclick="openModal('register-modal')">Register</button>
+        </div>
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Home (Hero) Section -->
+    <header id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Empowering Women in <span>Technology</span></h1>
+            <p>Join an active community of innovators, leaders, and creators pushing boundaries in Central Asia and beyond.</p>
+            <a href="#events" class="btn btn-primary btn-large">Discover Upcoming Events</a>
+        </div>
+        <div class="hero-shapes">
+            <!-- Decorative minimal shapes for depth -->
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+    </header>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest from the Blog</h2>
+                <p>Stories, insights, and impactful updates directly from our community leaders.</p>
+            </div>
+            
+            <div class="grid blog-grid">
+                <!-- Blog Cards -->
+                <article class="card">
+                    <div class="card-image bg-gradient-1"></div>
+                    <div class="card-content">
+                        <h3>Breaking the Glass Ceiling in AI</h3>
+                        <p>Discover how local women are spearheading initiatives in artificial intelligence and machine learning.</p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image bg-gradient-2"></div>
+                    <div class="card-content">
+                        <h3>Tech Entrepreneurship 101</h3>
+                        <p>A comprehensive guide to starting and scaling your own tech venture in a competitive market.</p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image bg-gradient-3"></div>
+                    <div class="card-content">
+                        <h3>Community Member Spotlight</h3>
+                        <p>Meet the brilliant minds behind the AUCA women's student organizations making waves locally.</p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Upcoming Events</h2>
+                <p>Network, learn, and grow through our meticulously curated workshops and summit meetups.</p>
+            </div>
+            <div class="events-list">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">24</span>
+                        <span class="month">MAR</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Web Development Bootcamp Kickoff</h3>
+                        <p>AUCA Tech Hub | 10:00 AM - 4:00 PM</p>
+                    </div>
+                    <button class="btn btn-outline">RSVP</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Resources & Live Feeds</h2>
+                <p>Stay updated effortlessly with our integrated platforms.</p>
+            </div>
+            <div class="api-feeds">
+                <!-- Instagram API Feed Placeholder -->
+                <div class="feed-container instagram-feed">
+                    <div class="feed-header">
+                        <h4>Instagram Gallery</h4>
+                    </div>
+                    <div class="feed-body placeholder-skeleton">
+                        <p class="text-muted">[Instagram Graph API Content Placeholder]</p>
+                    </div>
+                </div>
+
+                <!-- Telegram API Feed Placeholder -->
+                <div class="feed-container telegram-feed">
+                    <div class="feed-header">
+                        <h4>Telegram Channel Roll</h4>
+                    </div>
+                    <div class="feed-body placeholder-skeleton">
+                        <p class="text-muted">[Telegram Bot API Text Content Placeholder]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Women.kg - Empowering progress. All rights reserved.</p>
+    </footer>
+
+    <!-- Modals -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('login-modal')">&times;</span>
+            <h2>Welcome Back</h2>
+            <p class="text-muted mb-2">[Secure Login Form Placeholder System]</p>
+            <input type="email" placeholder="Email Address" class="form-control">
+            <input type="password" placeholder="Password" class="form-control">
+            <button class="btn btn-primary w-100">Sign In</button>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('register-modal')">&times;</span>
+            <h2>Join the Network</h2>
+            <p class="text-muted mb-2">[Secure Registration Form Placeholder System]</p>
+            <input type="text" placeholder="Full Name" class="form-control">
+            <input type="email" placeholder="Email Address" class="form-control">
+            <input type="password" placeholder="Password" class="form-control">
+            <button class="btn btn-primary w-100">Create Account</button>
+        </div>
+    </div>
+
+    <!-- Embedded JavaScript -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                const navLinks = document.querySelector('.nav-links');
+                if(navLinks.classList.contains('active')) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const authBtns = document.querySelector('.auth-buttons');
+            navLinks.classList.toggle('active');
+            authBtns.classList.toggle('active');
+        }
+
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'flex';
+            void modal.offsetWidth; 
+            modal.classList.add('show');
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal(event.target.id);
+            }
+        }
+        
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.navbar');
+            if (window.scrollY > 40) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
