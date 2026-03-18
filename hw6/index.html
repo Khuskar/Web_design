@@ -3,202 +3,363 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Women.kg | Empowering Women in Leadership</title>
-    <!-- Use Google Fonts for dynamic modern typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Women.kg | AUCA Community Hub</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Navigation Area -->
-    <nav class="navbar">
-        <div class="logo">Women<span>.kg</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#resources">Resources</a></li>
-        </ul>
-        <div class="auth-buttons">
-            <button class="btn btn-outline" onclick="openModal('login-modal')">Login</button>
-            <button class="btn btn-primary" onclick="openModal('register-modal')">Register</button>
-        </div>
-        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-    </nav>
-
-    <!-- Home (Hero) Section -->
-    <header id="home" class="hero-section">
-        <div class="hero-content">
-            <h1>Empowering Women in <span>Technology</span></h1>
-            <p>Join an active community of innovators, leaders, and creators pushing boundaries in Central Asia and beyond.</p>
-            <a href="#events" class="btn btn-primary btn-large">Discover Upcoming Events</a>
-        </div>
-        <div class="hero-shapes">
-            <!-- Decorative minimal shapes for depth -->
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
+<body class="light"> <!-- Using light theme by default -->
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <div class="navbar-left">
+                <a href="#" class="logo">
+                    <span class="material-symbols-outlined icon-primary">auto_awesome</span>
+                    <h2>Women.kg</h2>
+                </a>
+                <nav class="nav-links">
+                    <a href="#forum">Forum</a>
+                    <a href="#resources">Resources</a>
+                    <a href="#wellbeing">Wellbeing</a>
+                    <a href="#blog">Stories</a>
+                </nav>
+            </div>
+            <div class="navbar-right">
+                <div class="search-bar hidden-mobile">
+                    <span class="material-symbols-outlined icon-primary">search</span>
+                    <input type="text" placeholder="Search community...">
+                </div>
+                <!-- Reusing existing register-modal onclick to keep functionality -->
+                <button class="btn btn-primary btn-rounded" onclick="openModal('register-modal')">Join Us</button>
+            </div>
         </div>
     </header>
 
-    <!-- Blog Section -->
-    <section id="blog" class="section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Latest from the Blog</h2>
-                <p>Stories, insights, and impactful updates directly from our community leaders.</p>
-            </div>
-            
-            <div class="grid blog-grid">
-                <!-- Blog Cards -->
-                <article class="card">
-                    <div class="card-image bg-gradient-1"></div>
-                    <div class="card-content">
-                        <h3>Breaking the Glass Ceiling in AI</h3>
-                        <p>Discover how local women are spearheading initiatives in artificial intelligence and machine learning.</p>
-                        <a href="#" class="read-more">Read More &rarr;</a>
-                    </div>
-                </article>
-                <article class="card">
-                    <div class="card-image bg-gradient-2"></div>
-                    <div class="card-content">
-                        <h3>Tech Entrepreneurship 101</h3>
-                        <p>A comprehensive guide to starting and scaling your own tech venture in a competitive market.</p>
-                        <a href="#" class="read-more">Read More &rarr;</a>
-                    </div>
-                </article>
-                <article class="card">
-                    <div class="card-image bg-gradient-3"></div>
-                    <div class="card-content">
-                        <h3>Community Member Spotlight</h3>
-                        <p>Meet the brilliant minds behind the AUCA women's student organizations making waves locally.</p>
-                        <a href="#" class="read-more">Read More &rarr;</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Events Section -->
-    <section id="events" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Upcoming Events</h2>
-                <p>Network, learn, and grow through our meticulously curated workshops and summit meetups.</p>
-            </div>
-            <div class="events-list">
-                <div class="event-card">
-                    <div class="event-date">
-                        <span class="day">24</span>
-                        <span class="month">MAR</span>
-                    </div>
-                    <div class="event-details">
-                        <h3>Web Development Bootcamp Kickoff</h3>
-                        <p>AUCA Tech Hub | 10:00 AM - 4:00 PM</p>
-                    </div>
-                    <button class="btn btn-outline">RSVP</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resources Section -->
-    <section id="resources" class="section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Resources & Live Feeds</h2>
-                <p>Stay updated effortlessly with our integrated platforms.</p>
-            </div>
-            <div class="api-feeds">
-                <!-- Instagram API Feed Placeholder -->
-                <div class="feed-container instagram-feed">
-                    <div class="feed-header">
-                        <h4>Instagram Gallery</h4>
-                    </div>
-                    <div class="feed-body placeholder-skeleton">
-                        <p class="text-muted">[Instagram Graph API Content Placeholder]</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge">Built for AUCA Students</span>
+                    <h1 class="hero-title">Empowering the <span class="highlight-text">AUCA</span> Community</h1>
+                    <p class="hero-subtitle">
+                        A digital third space for the women of AUCA to connect, share, and grow together in a safe, moderated environment.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-large btn-shadow" onclick="openModal('register-modal')">Get Started</button>
+                        <a href="#forum" class="btn btn-outline btn-large">Explore Forum</a>
                     </div>
                 </div>
-
-                <!-- Telegram API Feed Placeholder -->
-                <div class="feed-container telegram-feed">
-                    <div class="feed-header">
-                        <h4>Telegram Channel Roll</h4>
+                <div class="hero-image-wrapper">
+                    <div class="hero-image">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJFAqlc_D-dcxtMMzk9AfBDJSclj3Pj_nnMdUp12Y3BYRPdSJy2Zfgu8jVfhianIqdcFkQhxGoam9bRdxmed5_EtTFLxC7kWk72IvDXrbKtIS46dA7miAlTvZupDFdwXHqYlAmUuY0TNFJhXoxs5inTfM9voS5MSHI8-J5HI3ezugiAMoTNwQAurOGBwa4tVDqLyCjcZeMt6lI79z_mY7ulEsJkbBofki-jOvFaLSlP7ISzUMWzpGluqRrqORm3VOZx5UtykJfnSs" alt="Group of diverse young women studying together smiling">
                     </div>
-                    <div class="feed-body placeholder-skeleton">
-                        <p class="text-muted">[Telegram Bot API Text Content Placeholder]</p>
+                    <div class="hero-floating-badge">
+                        <div class="badge-icon-text">
+                            <span class="material-symbols-outlined icon-primary">groups</span>
+                            <p>Join 500+ Active Members</p>
+                        </div>
+                        <p class="badge-subtext">Verified AUCA student community</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Community Forum Section -->
+        <section id="forum" class="forum-section bg-primary-light">
+            <div class="container container-sm">
+                <div class="section-header forum-header">
+                    <div>
+                        <h2 class="section-title">Community Forum</h2>
+                        <p class="section-subtitle">Share your thoughts, ask questions, or stay anonymous.</p>
+                    </div>
+                    <!-- Anonymity Toggle -->
+                    <div class="toggle-wrapper">
+                        <div class="toggle-text">
+                            <span class="toggle-title">Anonymity Toggle</span>
+                            <span class="toggle-subtitle">Hide your identity</span>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="forum-posts">
+                    <!-- Post Card 1 -->
+                    <div class="post-card">
+                        <div class="post-header">
+                            <div class="post-author">
+                                <div class="author-avatar avatar-anon">
+                                    <span class="material-symbols-outlined icon-primary">person</span>
+                                </div>
+                                <div class="author-info">
+                                    <p class="author-name">Anonymous User</p>
+                                    <p class="post-meta">2 hours ago in #CareerAdvice</p>
+                                </div>
+                            </div>
+                            <span class="material-symbols-outlined icon-more">more_horiz</span>
+                        </div>
+                        <h3 class="post-title">How do you manage stress during finals week at AUCA?</h3>
+                        <p class="post-excerpt">Feeling a bit overwhelmed with the capstone project. Any tips on balancing work and rest?</p>
+                        <div class="post-actions">
+                            <div class="action-item"><span class="material-symbols-outlined">thumb_up</span> 24</div>
+                            <div class="action-item"><span class="material-symbols-outlined">chat_bubble</span> 12</div>
+                            <div class="action-item"><span class="material-symbols-outlined">share</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Post Card 2 -->
+                    <div class="post-card">
+                        <div class="post-header">
+                            <div class="post-author">
+                                <div class="author-avatar">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYTTSxho_mGiuwjg8UHjBa5SIwQEQgm_3v7wuwwA-0JB6tJngpBmdy2FdnCASTeRksuoHOYPXSgSKP33zgnA2zk_xBkaiHkGpoEDu8E42hqiml9LscTh2yv2KTfRvBZtGEN19heMSH6RWWw78NK-Ej3vyPKpPwtsF-wcbL_Oncdh3gSmBoEo_WyZrO1RDzraVTgx4Yj9y42S2PxsOehR-awgNjQVNXZ1_K_K5RHf9eSa95zEZEd8G4JoIUiSRI9-PzWRekmhZLWIk" alt="User profile portrait">
+                                </div>
+                                <div class="author-info">
+                                    <p class="author-name">Amina K.</p>
+                                    <p class="post-meta">5 hours ago in #Q&A</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="post-title">Looking for a study buddy for Advanced Economics!</h3>
+                        <p class="post-excerpt">I'm in Room 304 most afternoons. Let's tackle those problem sets together!</p>
+                        <div class="post-actions">
+                            <div class="action-item"><span class="material-symbols-outlined">thumb_up</span> 8</div>
+                            <div class="action-item"><span class="material-symbols-outlined">chat_bubble</span> 3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="forum-footer">
+                    <a href="#" class="link-primary arrow-link">View All Discussions &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="resources-section">
+            <div class="container container-lg">
+                <div class="section-header-row">
+                    <h2 class="section-title">Professional Resources</h2>
+                    <a href="#" class="link-primary font-semibold">View All Workshops</a>
+                </div>
+                <div class="grid-3 resources-grid">
+                    <!-- Resource Card 1 -->
+                    <div class="resource-card hover-shadow group">
+                        <div class="card-image-wrapper">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOePedO3JrCIN-creW8DhlTIC3s8WuwO49l9gGezsiXnuSJgqxc1eAXBXAXLB2ZqqyB5auIqsriWl6YiPHtJzvpVytQheDUFMftA_0NivBrtEiwG7rmOKbZw6t5Z_Y90cT7Zm3jJDyhayF4rEOSaWMaLvKPVPN3jX4lC1AuC08822hfXS60PkSPwI30X75nds6cxGJsFEUMVP1qI7Bw65rz_joa38uZm3XatlIUYKEPv0ClIZVw9Y8PujPMZSZSh2L_icxIA6DfwI" alt="Women in a boardroom presentation" class="zoom-img">
+                            <span class="card-badge">Workshop</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">The Art of Pitching</h3>
+                            <p class="card-excerpt">Learn how to present your ideas with confidence to investors and professors.</p>
+                            <div class="card-footer">
+                                <span class="card-meta">Oct 15 &bull; AUCA Hall</span>
+                                <a href="#" class="link-primary font-bold">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Resource Card 2 -->
+                    <div class="resource-card hover-shadow group">
+                        <div class="card-image-wrapper">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1bQxz2hj6GYYhBWdZXIdm1VOEDcodpdWWee5mkTGpKQg9acX-k-BhyGm7oDVw7EakTV1Qw5jaolJ11RuUhrpUoaKcn5kb-Z7MoSb5-ehZ2-5U1h7I6c8vv9hPxefOGzTwWPSazs7Ov6_zj0Ji09XX0-40wZLTpyC28b5mEy7N_ckIkiHlqNmLwOO6LsE7mv7Syp-yoRw4kwCklLXS9YuCYnmxoiHI-Csdl4_5iXYOePrjnV7MECtcnwAPImNo84Q6Vo8lOn8U50g" alt="Women working on laptops in tech office" class="zoom-img">
+                            <span class="card-badge">Networking</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Women in Tech Meetup</h3>
+                            <p class="card-excerpt">Connect with AUCA alumni now working in global tech companies.</p>
+                            <div class="card-footer">
+                                <span class="card-meta">Oct 22 &bull; Virtual</span>
+                                <a href="#" class="link-primary font-bold">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Resource Card 3 -->
+                    <div class="resource-card hover-shadow group">
+                        <div class="card-image-wrapper">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz7jhKBV-Z1etlX7AcPZFrxDQDzLR9mBKBPSs8oy7N1U8FFBLmMVEWCeDsYfDJjHjXPrJRDo9V3LHRn53rV5XdvrmcUL5_HYaVCrEl6alLev9RwFj2ndk4nOpOSfmGGwyHyD6AcGrX_UZoJU4E5oIMASJHGL-KW_GIzZgHm_mf1BB7hAfeVIWp_t0WsPBOL3K83eh5TauzTCb4WAmxUFXp5uVZt-uZNaTFq6Qfi15bfZR6CbBYyTw_aKA_vardBQvgz2A1P8pRkJM" alt="Open notebook and pen on clean desk" class="zoom-img">
+                            <span class="card-badge">Grant</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Academic Grant Writing</h3>
+                            <p class="card-excerpt">A step-by-step guide to securing funding for your senior research projects.</p>
+                            <div class="card-footer">
+                                <span class="card-meta">Ongoing &bull; Online</span>
+                                <a href="#" class="link-primary font-bold">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wellbeing Section -->
+        <section id="wellbeing" class="wellbeing-section">
+            <div class="container container-lg">
+                <div class="wellbeing-grid">
+                    <div class="wellbeing-content">
+                        <h2 class="section-title lg-title">Mental Health Sanctuary</h2>
+                        <p class="section-subtitle lg-subtitle">
+                            Your well-being is our priority. Explore curated self-care tips, guided meditation resources, and access to confidential counseling services.
+                        </p>
+                        <div class="support-features">
+                            <div class="feature-item">
+                                <div class="feature-icon"><span class="material-symbols-outlined icon-primary">spa</span></div>
+                                <div class="feature-text">
+                                    <h4>Weekly Mindfulness Session</h4>
+                                    <p>Every Tuesday at 4 PM in the Wellbeing Room.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><span class="material-symbols-outlined icon-primary">support_agent</span></div>
+                                <div class="feature-text">
+                                    <h4>Confidential Counseling</h4>
+                                    <p>Reach out to our certified peer counselors anytime.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-dark btn-large">Get Support</button>
+                    </div>
+                    <div class="wellbeing-images-grid">
+                        <div class="col-left">
+                            <div class="info-card bg-primary-light">
+                                <span class="material-symbols-outlined icon-large icon-primary">cloud</span>
+                                <p class="info-badge-text">Sleep Tips</p>
+                            </div>
+                            <div class="image-card h-large">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuASJ0OGDf-f-EKD6SxEB87783upNS_IrMYHX0WybPsOTf58AatcADhEXC2Q-Wh3FzaztRt-19ttV8R_f7dONst4Jg2WkcLywP4pTihz12NIfK60Ic6tvECxOD51CDc7yhy0vmRIGFzvUDgW9wgWD_xq9EmEPf6r25KSF7tqfS8nKiJY5H684TMXHDbJPbXPoPrMDISTKmZZYWGQH55AwTapjZKYb4Bn5TC-Hh9nPxTzX4m1Sxqp6g8in8TNHUzOVhAlkIXOlbHGs8s" alt="Woman doing yoga in a peaceful setting">
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <div class="image-card h-large">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAQdWpHJ1SRO-aoCjykeLfHobcZwkqzev2F8htUZ_8m-ga7VBj_IRcSNYN9WzIolrZZFtJ0Emq0TLotEU_RvpbuGFpCRkbxJeN_VCk8KvI9qK--Q9mLo8FiAkE4K8dey039FVzZAWS8FQmUsBBCiV4c8QIKoIJlmE3ZZblNTX4K0ukxjuGf2toRkTefqlqpl5J6jZ0Q1_4h-qKdZX49yYCJwWHa6j-8t8wpbLgj1mu9ZRj-Iiv3W3I8WmXQOGgvFVpxFTW_M94tQo" alt="Cup of tea and a book on a wooden table">
+                            </div>
+                            <div class="info-card bg-primary-light">
+                                <span class="material-symbols-outlined icon-large icon-primary">favorite</span>
+                                <p class="info-badge-text">Daily Affirmations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog-section">
+            <div class="container container-lg">
+                <div class="section-header center mb-16">
+                    <h2 class="section-title">Editorial Success Stories</h2>
+                    <p class="section-subtitle mw-2xl">Celebrating the achievements and journeys of the women in our community.</p>
+                </div>
+                <div class="grid-2 blog-grid">
+                    <article class="blog-card flex-row">
+                        <div class="blog-image">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAana8TPYBPCZP7DpS5bqNXHrFNaMwCS9UUgTFAc38pcWhw7eJFQ0rRc4yE2X9qdMe5gXLlS40SQGHArM_zmV5o3DFrzloVhQBTw4DjqLenWTOZz_gfaamNgI8NPqLnMUJpsxZsLzA9jaw67IZnGZcm3e4DF_YS2gk6sK5Z3ntyTJXB_1aFSQ2UJWF29FOy7IIRYtg_a0Wx7YRRU8FPzWs9r8hXqJHj5jb4U4lb5Z0EXd3lnrropdZz2Ngv2FGGfADkT7Egkz1Bvzc" alt="Portrait of a smiling young student">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Student Spotlight</span>
+                            <h3 class="blog-title hover-primary">How Meerim started AUCA's first female-led AI lab</h3>
+                            <p class="blog-excerpt">"The community here gave me the confidence to apply for the grant..."</p>
+                            <a href="#" class="blog-link">Read Story</a>
+                        </div>
+                    </article>
+                    <article class="blog-card flex-row">
+                        <div class="blog-image">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0ekQnhDRlP6isjHc88RdI7aANKjl519wVAtTbdBrjFyQYBwQZAmg8is57VlJHIFUlEhyMgiPaxmLix6fP7joON6t5ArmARtzW0-AowBB8kRgsgyouCEeVbn7bsBguHAnmbPvuy6P8KBO4oOnqf72pKW6tgkfWv_B_G12GsM0q7aAsOafSw29aNsHcHMq3KTynHxoZgOihqjqq-yyGNsjS1fLYa_2pFJ9CrXtNtlBeuUdABx-rm7L4RVnhC0-O6qDNBlKo3uUj-5Q" alt="Two students walking on campus and laughing">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Alumni Success</span>
+                            <h3 class="blog-title hover-primary">From AUCA to the UN: Begimai's journey in Public Policy</h3>
+                            <p class="blog-excerpt">Lessons learned during the first year of professional life in Geneva.</p>
+                            <a href="#" class="blog-link">Read Story</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 Women.kg - Empowering progress. All rights reserved.</p>
+    <footer class="footer-section">
+        <div class="container container-lg">
+            <div class="footer-grid">
+                <div class="footer-col-main">
+                    <div class="footer-logo">
+                        <span class="material-symbols-outlined icon-primary">auto_awesome</span>
+                        <h2>Women.kg</h2>
+                    </div>
+                    <p class="footer-desc">A safe digital space for the AUCA community. We prioritize your privacy and safety above all else.</p>
+                    <div class="social-links">
+                        <a href="#"><span class="material-symbols-outlined">public</span></a>
+                        <a href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Forum Guidelines</a></li>
+                        <li><a href="#">Mentorship Program</a></li>
+                        <li><a href="#">Safety Center</a></li>
+                        <li><button class="btn btn-danger-outline">Clear My Data</button></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Emergency Help</h4>
+                    <ul class="emergency-list">
+                        <li class="primary-text"><span class="material-symbols-outlined text-sm">call</span> 112 (National Helpline)</li>
+                        <li><span class="material-symbols-outlined text-sm">emergency</span> AUCA Security: +996...</li>
+                        <li><span class="material-symbols-outlined text-sm">medical_services</span> Student Clinic: Room 102</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Women.kg Community. For AUCA Students, by AUCA Students.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Code of Conduct</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Modals -->
-    <div id="login-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('login-modal')">&times;</span>
-            <h2>Welcome Back</h2>
-            <p class="text-muted mb-2">[Secure Login Form Placeholder System]</p>
-            <input type="email" placeholder="Email Address" class="form-control">
-            <input type="password" placeholder="Password" class="form-control">
-            <button class="btn btn-primary w-100">Sign In</button>
-        </div>
-    </div>
-
     <div id="register-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('register-modal')">&times;</span>
-            <h2>Join the Network</h2>
-            <p class="text-muted mb-2">[Secure Registration Form Placeholder System]</p>
+            <h2 class="font-serif text-3xl mb-2">Join Our Network</h2>
+            <p class="text-slate-500 mb-6 font-sm">Create a verified AUCA student account.</p>
             <input type="text" placeholder="Full Name" class="form-control">
-            <input type="email" placeholder="Email Address" class="form-control">
+            <input type="email" placeholder="Email Address (@auca.kg)" class="form-control">
             <input type="password" placeholder="Password" class="form-control">
-            <button class="btn btn-primary w-100">Create Account</button>
+            <button class="btn btn-primary btn-rounded w-100 mt-4">Create Account</button>
         </div>
     </div>
 
     <!-- Embedded JavaScript -->
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
-                const navLinks = document.querySelector('.nav-links');
-                if(navLinks.classList.contains('active')) {
-                    toggleMobileMenu();
-                }
             });
         });
-
-        function toggleMobileMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            const authBtns = document.querySelector('.auth-buttons');
-            navLinks.classList.toggle('active');
-            authBtns.classList.toggle('active');
-        }
 
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
             modal.style.display = 'flex';
-            void modal.offsetWidth; 
-            modal.classList.add('show');
+            setTimeout(() => { modal.classList.add('show'); }, 10);
         }
 
         function closeModal(modalId) {
             const modal = document.getElementById(modalId);
             modal.classList.remove('show');
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 300);
+            setTimeout(() => { modal.style.display = 'none'; }, 300);
         }
 
         window.onclick = function(event) {
@@ -206,15 +367,6 @@
                 closeModal(event.target.id);
             }
         }
-        
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('.navbar');
-            if (window.scrollY > 40) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
     </script>
 </body>
 </html>
