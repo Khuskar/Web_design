@@ -20,8 +20,8 @@ body {
 .container {
   display: grid;
 
-    grid-template-rows: 52px 174px 64px 372px 70px 328px;
-    grid-template-columns: 160px 715px 326px;
+    grid-template-rows: 52px 174px 64px 372px 69px 329px;
+    grid-template-columns: 161px 714px 326px;
 
   grid-template-areas:
     "one seven seven"
