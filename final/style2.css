@@ -2,11 +2,16 @@
   box-sizing: border-box;
 }
 
+html {
+  background: #0f172a;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #eef2f6;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: #1d2630;
+  overflow-x: hidden;
 }
 
 img {
@@ -20,25 +25,30 @@ button {
   cursor: pointer;
 }
 
+
 .btn-switch {
   position: fixed;
   right: 16px;
   bottom: 16px;
   z-index: 1000;
-  background: #0b4a7a;
+  background: #e02d2d;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 22px;
   padding: 10px 18px;
   font-weight: bold;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+}
+
+.btn-switch:hover {
+  background: #b91c1c;
 }
 
 .buttonMenu {
   display: none;
   position: fixed;
-  right: 15px;
-  top: 15px;
+  right: 14px;
+  top: 14px;
   z-index: 1000;
   background: white;
   color: #073b63;
@@ -53,29 +63,40 @@ button {
   max-width: 1200px;
   margin: 18px auto;
   display: grid;
-  grid-template-columns: 2fr 1.1fr;
+  grid-template-columns: minmax(180px, 230px) minmax(0, 1fr) minmax(260px, 330px);
   grid-template-areas:
-    "logo logo"
-    "menu menu"
-    "sub sub"
-    "ad ad"
-    "main interview"
-    "news video";
+    "logo ad ad"
+    "menu sub sub"
+    "menu main interview"
+    "menu news video";
   gap: 16px;
 }
 
-/* LOGO */
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8 {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
 
 .box1 {
   grid-area: logo;
-  background: white;
-  border-radius: 14px;
   padding: 18px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-  font-size: 42px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
   font-weight: 900;
   letter-spacing: -2px;
 }
@@ -85,33 +106,30 @@ button {
 }
 
 .logo-red {
-  color: #e32e2e;
+  color: #e02d2d;
 }
-
-/* MAIN MENU */
 
 .box7 {
   grid-area: menu;
   background: #083b63;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
 }
 
 .box7 ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 12px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 7px;
 }
 
 .box7 li {
   color: white;
-  padding: 14px 16px;
+  padding: 12px 14px;
   font-size: 13px;
   font-weight: bold;
-  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  transition: 0.2s;
 }
 
 .box7 li:hover {
@@ -122,18 +140,13 @@ button {
   background: #e02d2d;
 }
 
-/* SUB MENU */
-
 .box3 {
   grid-area: sub;
-  background: white;
-  border-radius: 14px;
   padding: 14px;
   display: flex;
   justify-content: space-between;
   gap: 14px;
   align-items: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
 .sub-menu {
@@ -178,21 +191,18 @@ button {
   font-size: 17px;
 }
 
-/* ADVERTISEMENT */
-
 .box2 {
   grid-area: ad;
   background: linear-gradient(135deg, #ffffff, #dcecff);
-  border-radius: 14px;
   padding: 16px;
   display: grid;
-  grid-template-columns: 1fr 1.4fr auto;
+  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr) auto;
   gap: 16px;
   align-items: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
 .ad-left img {
+  width: 100%;
   border-radius: 12px;
 }
 
@@ -209,7 +219,8 @@ button {
 
 .ad-right h1 {
   margin: 0 0 8px;
-  font-size: 24px;
+  font-size: 25px;
+  line-height: 1.2;
   color: #083b63;
 }
 
@@ -228,19 +239,13 @@ button {
   font-weight: bold;
 }
 
+.ad-right button:hover {
+  background: #b91c1c;
+}
+
 .rss-box {
   color: #f58220;
   font-size: 34px;
-}
-
-/* MAIN NEWS */
-
-.box4 {
-  grid-area: main;
-  background: white;
-  border-radius: 14px;
-  padding: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
 .section-title {
@@ -252,14 +257,20 @@ button {
   padding-left: 10px;
 }
 
+.box4 {
+  grid-area: main;
+  padding: 16px;
+}
+
 .main-news {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(220px, 1fr) minmax(220px, 1fr);
   gap: 15px;
 }
 
 .main-photo img {
   width: 100%;
+  height: 100%;
   border-radius: 14px;
   object-fit: cover;
 }
@@ -271,6 +282,7 @@ button {
   border-radius: 10px;
   line-height: 1.35;
   font-size: 14px;
+  border-left: 4px solid #1788d4;
 }
 
 .dots {
@@ -290,14 +302,9 @@ button {
   background: #e02d2d;
 }
 
-/* INTERVIEW */
-
 .box8 {
   grid-area: interview;
-  background: white;
-  border-radius: 14px;
   padding: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
 .poll h2 {
@@ -343,21 +350,17 @@ button {
   background: #e02d2d;
 }
 
-/* NEWS LIST */
 
 .box6 {
   grid-area: news;
-  background: white;
-  border-radius: 14px;
   padding: 16px;
   display: grid;
   gap: 14px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
 .news-item {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 160px minmax(0, 1fr);
   gap: 14px;
   padding-bottom: 14px;
   border-bottom: 1px solid #e4ebf1;
@@ -370,6 +373,7 @@ button {
 
 .news-item img {
   width: 100%;
+  height: 95px;
   border-radius: 12px;
   object-fit: cover;
 }
@@ -394,14 +398,9 @@ button {
   font-weight: bold;
 }
 
-/* VIDEO */
-
 .box5 {
   grid-area: video;
-  background: white;
-  border-radius: 14px;
   padding: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
 .video-card {
@@ -449,7 +448,6 @@ button {
   margin-top: 14px;
 }
 
-/* TABLET VIEW */
 
 @media screen and (max-width: 850px) {
   .container {
@@ -463,6 +461,11 @@ button {
       "interview"
       "news"
       "video";
+  }
+
+  .box7 ul {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .box2 {
@@ -479,11 +482,10 @@ button {
   }
 }
 
-/* MOBILE VIEW: LESS THAN 500PX */
 
 @media screen and (max-width: 500px) {
   body {
-    background: white;
+    background: #ffffff;
   }
 
   .buttonMenu {
@@ -494,6 +496,14 @@ button {
     width: 100%;
     margin: 0;
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "sub"
+      "ad"
+      "main"
+      "interview"
+      "news"
+      "video";
     gap: 12px;
     padding: 10px;
   }
@@ -527,21 +537,21 @@ button {
     display: block;
     position: fixed;
     right: 12px;
-    top: 62px;
+    top: 48px;
     z-index: 999;
-    width: 190px;
+    width: min(220px, calc(100vw - 24px));
     border-radius: 12px;
   }
 
-  .box7 ul {
-    display: block;
+  .box7.mobileMenu ul {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
   }
 
-  .box7 li {
+  .box7.mobileMenu li {
     display: block;
     width: 100%;
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
     padding: 12px 14px;
   }
 
